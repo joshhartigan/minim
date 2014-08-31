@@ -1,7 +1,7 @@
 ![Minim](http://joshhartigan.github.io/minim/logo.png)
 
 Minim is an interpreted programming language being written in Go. There are two previous
-attempts of writing the interpreter in Python [v1.0.0/] and C++ [v2.0.0/]. The interpreter,
+attempts of writing the interpreter in Python and C++. The interpreter,
 `mi`, reads a plain text file (extension .min) and evaluates it line by line.
 
 ### Minim Interpter v2.5.0 [mi25] Checklist:
