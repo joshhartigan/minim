@@ -1,45 +1,32 @@
-![Minim](http://joshhartigan.github.io/minim/logo.png)
+# Minim
 
-Minim is an interpreted programming language being written in Go. There are two previous
-attempts of writing the interpreter in Python and C++. The interpreter,
-`mi`, reads a plain text file (extension .min) and evaluates it line by line.
+I want to make a scripting language, and I want to also improve my general
+ability in programming. This project is going to (hopefully) allow me to both of
+these things. I am going to slowly write an implementation of my own language,
+whic may or may not turn out to be useful for people. The development will be
+done in incremental parts.
 
-### Minim Interpter v2.5.0 [mi25] Checklist:
+Here's how each part will be documented:
 
-#### Completed:
+### Part x: Descriptional Name
 
-  * mi25 recognises numbers
-  * mi25 recognises operators ("/", "*", "+", "-")
-  * mi25 recognises expressions (e.g. "3 + 8 * 2")
-  * mi25 recognises calls for functions from the standard library
-  
-#### Incomplete / In Progress
+Description of implementation.
 
-  * mi25 runs functions from the standard library when called
-  * mi25 can evaluate expressions
-  * mi25 can define and recall variables
+**Specification:** Specific details on the certain part of the language
+implementation.
 
-### Syntax
+**Code:** Where to look in the source code for the main source for the certain
+part.
 
-This program writes 'Hello, World' 10 times.
+--
 
-  ```
-  var i = 0
-  for i++ until 10 {
-    (write "Hello, World")
-  }
-  ```
+### Part 1: Function Calls
 
-An explanation of syntactical elements shown above:
+I'm not sure whether or not this is an odd thing to implement first, but I'm
+doing it anyway. I want functions to be called with a lisp style (although this
+language is not going to be a lisp derivative), and I want to start out with
+basic standard-library-esque functions.
 
-  * Dynamic typing with `var` keyword
-  * Emphasis on readability:
-    * *C++* `for` statement header: `for (int i = 0; i < 10; i++)`
-    * *Minim* `for` statement header: `for i++ until 10`
-  * Function calls follow syntax `(functionName param1 param2 ...)`
-  * Blocks defined by braces - insignificant whitespace.
+**Specification:** Functions in Minim are called as `(name arg1 arg2 ar...)`.
 
-
-### Freedom
-
-Licensed under the MIT License - see 'LICENSE' file for details.
+**Code:** `minim.py:19`, `functions.py`, `library.py:27`
