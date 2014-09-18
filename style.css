@@ -1,15 +1,18 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic);
 
 body {
-  color: #555;
+  background-color: #E2D7BF;
+  color: #333;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 50px;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: Ubuntu Mono, Monaco, Menlo, monospace;
+  font-size: 14pt;
 }
 
 img[alt="logo"] {
   width: 285px;
+  vertical-align: middle;
 }
 
 p {
@@ -19,22 +22,30 @@ p {
 hr {
   border: 0;
   height: 0;
-  border-top: 2px solid #eee;
+  border-top: 2px solid #EBE1CE;
 }
 
-#nav {
-  font-size: 16pt;
+::selection {
+  background-color: #C0D698;
 }
+
 #nav li{
   list-style-type: none;
   display: inline;
   margin-right: 15px;
 }
 #nav a {
-  color: #8bb246;
-  border-bottom: 2px solid #8bb246;
+  color: #CC6650;
+  border-bottom: 2px solid #CC6650;
   text-decoration: none;
-} #nav a:visited {
-  color: #cc6650;
-  border-bottom: 2px solid #cc6650;
+} #nav a:hover {
+  color: #8BB246;
+  border-bottom: 2px solid #8BB246;
+}
+
+#main-header {
+  vertical-align: middle;
+  display: inline;
+  font-size: 100px;
+  margin-left: 25px;
 }
