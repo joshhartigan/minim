@@ -5,18 +5,21 @@
 import sys
 
 import min_types
+import variables
 
-errors = {"type": "*** WrongTypeError: Incorrect type as argument."}
+errors = {
+    "not_found": "*** NotFoundError: Specified identifier doesn't exist.",
+    "empty_var": "*** EmptyVarError: No name or value given in declaration."
+}
 
 def write(args):
     values = []
 
     for arg in args:
-        if not min_types.string(arg):
-            sys.stdout.write( errors["type"] + "\n" )
-            sys.exit(1)
-        else:
+        if min_types.string(arg):
             values.append( min_types.stringValue(arg) )
+        elif arg in variables.varTable.keys():
+            values.append( str(variables.varTable[arg]) )
 
     sys.stdout.write(" ".join(values))
 

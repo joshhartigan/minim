@@ -1,2 +1,6 @@
 (writeln "hello")
-(write "hello" "world")
+(writeln "world")
+
+var a = 2
+
+(writeln a)
