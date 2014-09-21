@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# Name:        minim.py
+# Name:        minim
 # Author:      Josh Hartigan
 # Description: Minim Scripting Language - Read file, process lines.
 
