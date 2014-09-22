@@ -25,7 +25,7 @@ var parseExpression = function(program) {
 var parseApply = function(expr, program) {
   program = utils.cutWhitespace(program);
 
-  if (program[0] != "(") {
+  if ( program[0] != "(" ) {
     return { expr: expr, rest: program };
   }
 

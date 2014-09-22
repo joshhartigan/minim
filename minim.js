@@ -1,9 +1,12 @@
+#!/usr/local/bin/node
+
 // Name:        minim.js
 // Author:      Josh Hartigan
 // Description: Central definitions for the Minim language.
 
+var fs       = require("fs");
 var evaluate = require("./evaluate");
-var parser = require("./parser");
+var parser   = require("./parser");
 
 // Special forms -- in a nutshell, reserved words.
 exports.specialForms = Object.create(null);
@@ -103,10 +106,21 @@ topEnv["write"] = function(value) {
 
 function run() {
   var env = Object.create(topEnv);
+
   var program = Array.prototype.slice
     .call(arguments, 0)
     .join("\n")
 
   return evaluate.evalSyntax( parser.parse(program), env );
 }
+
+// Read source files to run
+fs.readFile( process.argv[2], function(err, data) {
+  if (err) {
+    throw err;
+  }
+
+  var program = data.toString().split("\n").join("");
+  run( program );
+});
 
