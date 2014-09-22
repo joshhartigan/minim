@@ -1,5 +1,0 @@
-var name = "Josh"
-var age = 14
-
-(writeln "hello i am josh")
-(writeln "hello," name)
